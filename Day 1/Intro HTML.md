@@ -26,10 +26,13 @@ Element contains :
 - closing tag : the second HTML tag used to end an HTML element
 
 ### header 
-*<h1>* is used for the main header. It is used for the most important headings on the webpage and browsers typically render it as large,bold text.
+`<h1>` is used for the main header. It is used for the most important headings on the webpage and browsers typically render it as large, bold text.
 
 There are six different headings, from h1 to h6.
-`<h1>chewyeechen</h1>`
+
+```html
+<h1>chewyeechen</h1>
+```
 
 ### paragraph
 It contains a block of plain text
