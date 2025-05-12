@@ -25,15 +25,11 @@ Element contains :
 - content : the information contained between the opening and closing tags of an HTML element
 - closing tag : the second HTML tag used to end an HTML element
 
-### header
-
-`<h1>` is used for the main header. It is used for the most important headings on the webpage and browsers typically render it as large, bold text.
+### header 
+*<h1>* is used for the main header. It is used for the most important headings on the webpage and browsers typically render it as large,bold text.
 
 There are six different headings, from h1 to h6.
-
-```html
-<h1>chewyeechen</h1>
-```
+`<h1>chewyeechen</h1>`
 
 ### paragraph
 It contains a block of plain text
@@ -94,42 +90,6 @@ Each list item is **numbered**.
     <li>Add eggs and vanila extracts to bowl.</li>
 </ol>
 ```
-
-### image
-`<img>` is a self-closing tag.
-`<img src = "image-location.jpg"/>`
-where src is an attributes and set to image's source.
-
-`alt` is an attributes which means alternative text, brings meaning to the images. If an image fails to load on a web page, a user can mouse over the area orginally intended for the image and read a bried description of the image. `alt` attribute also plays a role in Search Engine Optimization(SEO) because search engines cannot "see" the images on the website.
-`<img src="#" alt = "A field of yellow sunflowers"/>`
-
-### video
-`<video>` also requires a `src` attribute with a link to the video source.
-```
-<video src = "location.mp4" width = "320" height = "240" controls>
-<!-- control attributes instructs the browser to include the basic video controls such as pausing and playing -->
-    Video not supported
-    <!-- This is a fallback text -->
-</video>
-```
-
-### link
-Add links to a webpage by adding an anchor element `<a>` and including the text of the link between the openning and closing tags.
-
-`<a>This is a link to wikipedia</a>`
-
-However, the example above is incomplete without the `<href>` attribute. This attribute stands for hypertext reference and is used to link to a path.
-
-`<a href = "address location">This is a link to x</a>`
-
-`target` attribute specifies how a link should open. For example, clicked on a link and obseved the resulting web page open in a new browser.For a link to open in a new tab, the `target` attribute require a value of `_blank`
-
-`<a href="address location" target="_blank">This is a link to x</a>`
-
-For the security and performance reasons, it is better to involve `rel = "noopener noreferrer"` when using `target="_blank"`. It is able to prevent the new tab from accessing `window.opener`, protecting your page. It is able to prevents the browser from sending HTTP referrer header.
-
-`<a href="address location" target="_blank" rel = "noopener noreferrer">This is a link to x</a>`
-
 
 ## Attributes
 It is used for **expand an element's tag**. Attributes are content added to the opening tag of an element and can be used in several different ways from providing information to change styling. 
