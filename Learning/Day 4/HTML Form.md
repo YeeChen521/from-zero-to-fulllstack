@@ -155,6 +155,12 @@ It would look like this:
     </textarea>
 </form>
 ```
+It would look like this:
+<img src="C:\Users\USER\OneDrive\Pictures\Screenshots\Screenshot 2025-05-14 191730.png">
+
+If we wanted an even bigger text field, we could click and drag on the bottom right corner to expand it. If we want to add default text in the textbox:
+
+`<textarea>Adding default text</textarea>`
 
 ## Label
 The `<label>` element has an opening and closing tag and displays text that is written between the opening and closing tags. To associate a `<label>` and an `<input>`, the `<input>` needs an `id` attribue.
@@ -166,3 +172,49 @@ The `<label>` element has an opening and closing tag and displays text that is w
 </form>
 ```
 When `<label>` element is clicked, the corresponding `<input>` is highlighted.
+
+## Submit Form
+To make a submit button in a `<form>`, we are going to use the reliable `<input>` element and set the `type` to `"submit"`.
+```
+<form>
+    <input type="submit" value="send">
+</form>
+```
+If there isn't a `value` attribute, the default text `Submit` shows up on the button.
+
+## Form Validation
+### requiring an input
+Sometimes we have field in our `<form>` which are **not optional**.** To enforce this rule. we can add the `required` attribute to an `<input>` element.
+```
+<form action="/example.html" method="POST">
+    <label for="allergies">Do you have any dietary restrictions?</label>
+    <br>
+    <input id="allergies" name="allergies" type="text" required>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+```
+
+## checking text length
+There are certainly cases where we don't want our users typing more than a certain number of characters. We might want to set a minimum number of characters. To set a minimum number of character for a texr field, we add the `minlength` attribute and a value to set a minimum value. Similarly, we use the `maxlength` attribute and set a maximum value.
+```
+<form action="/example.html" method="POST">
+    <label for="summary">Summarize your feelings in less than 250 characters</label>
+    <input id-"summary" name-"summary" type="text" minlenght="5" maxlength="250" required>
+    <input type="submit" value="Submit">
+</form>
+```
+If the user tries to submit the `<form>` with less than the minimum value, a warning message appear. If the user tries to submit the `<form>` with more than the maximum value, they don't get warning message but they can't type it in.
+
+### matching a pattern
+For cases when we want user input to follow specific guidelines, we use the `pattern` attribute and assign it a regular expression (a sequence of characters that make up a search pattern).
+```
+<form action="/example.html" method="POST">
+    <label for="payment">Credit Card Number(no spaces):</label>
+    <br>
+    <input id="payment" name="payment" type="text" required pattern="[0-9]{14,16}">
+    <input type="submit" value="Submit">
+</form>
+```
+In the example above, the `type` for `<input>` is `text` but not `number` because of `<input type="number">` will automatically strip leading zeros. `patertn="[0-9]{14,16}"` means the user only able to provide numbers and that they entered at least 14 digits and at most 16 digits.
+
